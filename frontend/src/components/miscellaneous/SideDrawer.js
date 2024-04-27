@@ -154,6 +154,7 @@ const SideDrawer = () => {
                 <MenuItem key={notify._id} onClick={() => {
                   setSelectedChat(notify.chat);
                   setNotification(notification.filter((n) => n !== notify));
+                  setNotification([]);
                 }}>
                   {notify.chat.isGroupChat ? `New Message in ${notify.chat.chatName}` : `New Message from ${getSender(user, notify.chat.users)}`}
                 </MenuItem>
