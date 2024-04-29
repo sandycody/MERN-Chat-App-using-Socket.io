@@ -39,7 +39,8 @@ const MyChats = ({ fetchAgain }) => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
-  }, [])
+  }, []);
+
   return (
     <Box
       display={{ base: selectedChat ? "none" : "flex", md: 'flex' }}
@@ -78,6 +79,7 @@ const MyChats = ({ fetchAgain }) => {
         p={3}
         bg='#F8F8F8'
         w='100%'
+        h='100%'
         borderRadius='lg'
         overflowY='hidden'
       >
@@ -99,6 +101,14 @@ const MyChats = ({ fetchAgain }) => {
                     getSender(loggedUser, chat.users)
                   ) : chat.chatName}
                 </Text>
+                {chat.latestMessage && (
+                  <Text fontSize="xs">
+                    <b>{chat.latestMessage.sender.name} : </b>
+                    {chat.latestMessage.content.length > 50
+                      ? chat.latestMessage.content.substring(0, 51) + "..."
+                      : chat.latestMessage.content}
+                  </Text>
+                )}
               </Box>
             ))}
           </Stack>
