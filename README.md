@@ -62,7 +62,7 @@ Start the Client
 ### Search Users
 ![](https://github.com/sandycody/MERN-Chat-App-using-Socket.io/blob/main/screenshots/Search%20Users.png)
 ### Create Group Chats
-![](https://github.com/sandycody/MERN-Chat-App-using-Socket.io/blob/main/screenshots/Creating%20Group.png)
+![](https://github.com/sandycody/MERN-Chat-App-using-Socket.io/blob/main/screenshots/Create%20Group.png)
 ### Notifications 
 ![](https://github.com/sandycody/MERN-Chat-App-using-Socket.io/blob/main/screenshots/Notification.png)
 ### Add or Remove users from group
