@@ -7,7 +7,7 @@ import { Input, InputGroup, InputRightElement } from '@chakra-ui/input';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
-axios.defaults.baseURL = 'http://localhost:3001'; // Replace with your API base URL
+axios.defaults.baseURL = 'https://chat-burst.netlify.app/'; // Replace with your API base URL
 
 
 const Signup = () => {
