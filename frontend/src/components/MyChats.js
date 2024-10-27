@@ -39,7 +39,7 @@ const MyChats = ({ fetchAgain }) => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
-  }, []);
+  }, [fetchAgain]);
 
   return (
     <Box
@@ -97,9 +97,9 @@ const MyChats = ({ fetchAgain }) => {
                 key={chat._id}
               >
                 <Text>
-                  {!chat.isGroupChat? (
+                  {!chat.isGroupChat? 
                     getSender(loggedUser, chat.users)
-                  ) : chat.chatName}
+                   : chat.chatName}
                 </Text>
                 {chat.latestMessage && (
                   <Text fontSize="xs">
